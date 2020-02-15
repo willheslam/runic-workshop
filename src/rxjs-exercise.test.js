@@ -4,18 +4,19 @@ import { map, filter, catchError, flatMap, reduce } from 'rxjs/operators'
 import test from 'ava'
 
 test('addition', async t => {
-  t.is(
+  t.deepEqual(
     await Rx.of(42)
       .pipe(map(x => {
         // ...
       }))
+      .pipe(reduce((array, value) => array.concat([value]), []))
       .toPromise(),
     [43]
   )
 })
 
 test('filtering', async t => {
-  t.is(
+  t.deepEqual(
     await Rx.of(1, 2, 3, 4, 5, 6)
       .pipe(
         filter(x => {
@@ -24,6 +25,7 @@ test('filtering', async t => {
         map(x => {
           // ...
         }))
+      .pipe(reduce((array, value) => array.concat([value]), []))
       .toPromise(),
     [20, 40, 60]
   )
