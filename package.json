@@ -1,0 +1,31 @@
+{
+  "name": "runic-workshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava --verbose --timeout 3m",
+    "start": "node -r esm src/serve.js",
+    "start-trad": "node -r esm src/serve-trad.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "crocks": "^0.12.4",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "runic-prototype": "github:willheslam/runic-prototype",
+    "rxjs": "^6.5.4"
+  },
+  "devDependencies": {
+    "@ava/babel": "^1.0.1",
+    "ava": "^3.3.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-ava": "^10.0.1",
+    "eslint-plugin-import": "^2.20.1",
+    "fast-check": "^1.22.2",
+    "standard": "^14.3.1"
+  }
+}
