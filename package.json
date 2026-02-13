@@ -15,7 +15,7 @@
     "cors": "^2.8.5",
     "crocks": "^0.12.4",
     "esm": "^3.2.25",
-    "express": "^4.17.1",
+    "express": "^4.22.1",
     "runic-prototype": "github:willheslam/runic-prototype",
     "rxjs": "^6.5.4"
   },
